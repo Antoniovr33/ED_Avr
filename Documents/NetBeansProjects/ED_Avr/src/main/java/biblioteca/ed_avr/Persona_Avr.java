@@ -1,6 +1,10 @@
 
 package biblioteca.ed_avr;
 
+import static biblioteca.ed_avr.Main.CalcularPeso;
+import static biblioteca.ed_avr.Main.CalcularPeso2;
+import static biblioteca.ed_avr.Main.CalcularPeso3;
+
 public class Persona_Avr {
 
     @Override
@@ -62,8 +66,28 @@ public class Persona_Avr {
 	private String nombre;
 	private double masa;
         private double altura;
-        private int edad;
+        private int edad;  
+
+        public static double IMC3(Persona_Avr pers3, Avr_GravedadPlaneta plan3) {
+        double pesoJupiter = CalcularPeso3(pers3, plan3);
+        return pesoJupiter;
+    }
+
+    public static double IMC2(Persona_Avr pers2, Avr_GravedadPlaneta plan2) {
+        double pesoMarte = CalcularPeso2(pers2, plan2);
+        return pesoMarte;
+    }
+
+    public static double IMC1(Persona_Avr pers1, Avr_GravedadPlaneta plan1) {
+        double pesoTierra = CalcularPeso(pers1, plan1);
+        return pesoTierra;
+    }
+
+
 }
+
+
+
 
 
 
